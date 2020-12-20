@@ -30,7 +30,7 @@ public class BasicMovement : MonoBehaviour
     {
         if (health <= 0)
         {
-            Debug.Log("dead");
+            Destroy(gameObject);
         }
     }
 
@@ -38,7 +38,7 @@ public class BasicMovement : MonoBehaviour
     {
         if (collider.gameObject.tag == "Enemy")
         {
-            Debug.Log("Hit");
+            health -= 1;
         }
     }
 }
